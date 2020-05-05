@@ -151,6 +151,9 @@
     width: rem(50px);
     box-sizing: border-box;
     padding: rem(10px) 0;
+    @include sm {
+      width: rem(30px);
+    }
 
     & img {
       max-width: 100%;
@@ -360,6 +363,11 @@
     height: rem(45px);
     background-color: $whiteColor;
     box-shadow: 0px 0px 5px 0px rgba($navColor, 0.2);
+
+    @include sm {
+      width: rem(40px);
+      height: rem(40px);
+    }
   }
 
   &__hamburger_link {
