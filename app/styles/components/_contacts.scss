@@ -1,0 +1,169 @@
+.contacts {
+  background-color: #e8e8e8;
+
+  &__input-wrap {
+    margin-bottom: rem(20px);
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @include sm {
+        margin-bottom: rem(20px);
+      }
+    }
+
+    label {
+      display: inline-block;
+      font-size: rem(18px);
+      margin-bottom: rem(10px);
+      color: $titleColor;
+      @include xs {
+        font-size: rem(16px);
+      }
+    }
+
+    span {
+      margin-left: rem(3px);
+      color: red;
+      font-size: rem(24px);
+    }
+
+    input {
+      outline: none;
+      box-sizing: border-box;
+      display: block;
+      border: none;
+      width: 100%;
+      padding: rem(12px);
+
+      @include placeholder {
+        color: #cccdcc;
+        font-weight: 200;
+      }
+    }
+  }
+
+
+
+  &__text-wrap {
+    flex: 1 0 auto;
+
+    label {
+      display: inline-block;
+      font-size: rem(18px);
+      margin-bottom: rem(10px);
+      @include xs {
+        font-size: rem(16px);
+      }
+    }
+
+    span {
+      margin-left: rem(3px);
+      color: red;
+      font-size: rem(24px);
+    }
+
+    textarea {
+      height: rem(160px);
+      width: 100%;
+      display: block;
+      box-sizing: border-box;
+      resize: none;
+      outline: none;
+      border: none;
+      padding: rem(12px);
+
+      @include placeholder {
+        color: #cccdcc;
+        font-weight: 200;
+      }
+    }
+  }
+
+  &__btn-wrap {
+    
+    flex: 0 0 auto;
+    margin-left: auto;
+
+    @include sm {
+      width: 50%;
+    }
+    @include xs {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    & button {
+  
+      transition: ease-out 0.3s;
+      padding: rem(10px) rem(30px);
+      background: $secondColor;
+      box-sizing: border-box;
+      border: 2px solid $secondColor;
+      font-size: rem(18px);
+      color: $titleColor;
+      font-weight: 500;
+      @include sm {
+        width: 100%;
+      }
+      
+
+      &:hover {
+        background: $whiteColor;
+        border: 2px solid $secondColor;
+      }
+    }
+  }
+
+  &__info {
+    width: 100%;
+    padding: rem(30px);
+    background-color: #005e97;
+    box-sizing: border-box;
+  }
+
+  &__info-icon {
+    margin-right: rem(15px);
+    @include lg {
+      margin-right: rem(8px);
+    }
+    @include sm {
+      margin-bottom: rem(15px);
+    }
+
+    & i {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: rem(50px);
+      height: rem(50px);
+      border: 1px solid $secondColor;
+      border-radius: 50%;
+      font-size: rem(24px);
+      color: $secondColor;
+    }
+  }
+
+  &__info-text {
+    color: $whiteColor;
+    @include xs {
+      text-align: center;
+    }
+
+    & a {
+      transition: ease-out 0.3s;
+      display: block;
+      color: $whiteColor;
+      &:hover {
+        color: $secondColor;
+      }
+      @include sm {
+        margin: 0 auto;
+        display: inline-block;
+        margin-right: rem(10px);
+      }
+    }
+  }
+
+ 
+}
