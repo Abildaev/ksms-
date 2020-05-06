@@ -1,15 +1,6 @@
 document.addEventListener('DOMContentLoaded', function (event) {
 
-  (function (d, s, id) {
-    var js;
-    if (d.getElementById(id)) {
-      return;
-    }
-    js = d.createElement(s);
-    js.id = id;
-    js.src = 'https://embedsocial.com/embedscript/in.js';
-    d.getElementsByTagName('head')[0].appendChild(js);
-  }(document, 'script', 'EmbedSocialInstagramScript'));
+
 
 
 
@@ -97,7 +88,25 @@ function changeNav() {
   const distanceY = this.pageYOffset;
   const nav = document.querySelector('.nav')
   const header = document.querySelector('.header')
-  distanceY >= 720 ? (nav.classList.add('nav__fixed'), header.classList.add('header__mb')) : (nav.classList.remove('nav__fixed'), header.classList.remove('header__mb'));
+  
+  if (distanceY >= 720) {
+    nav.classList.add('nav__fixed');
+    header.classList.add('header__mb');
+    (function (d, s, id) {
+      var js;
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://embedsocial.com/embedscript/in.js';
+      d.getElementsByTagName('head')[0].appendChild(js);
+    }(document, 'script', 'EmbedSocialInstagramScript'));
+  } 
+  else {
+    nav.classList.remove('nav__fixed');
+    header.classList.remove('header__mb');
+  }
 }
 
 window.addEventListener('load', changeNav);
