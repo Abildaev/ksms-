@@ -1,0 +1,70 @@
+.services {
+
+  &__border {
+    transition: ease-out 0.3s;
+    min-height: 100%;
+    border: 1px solid $borderColor;
+    box-sizing: border-box;
+    padding: rem(8px);
+    &:hover {
+      transform: translateY(-10px);
+      border: 1px solid $mainColor;
+      @include md {
+        transform: translateY(0);
+      }
+
+      & .services__wrap {
+        border: 1px solid $mainColor;
+      }
+    }
+
+  }
+
+
+  &__wrap {
+    transition: ease-out 0.3s;
+    min-height: rem(230px);
+    border: 1px solid $borderColor;
+    box-sizing: border-box;
+    padding: rem(25px);
+    @include lg {
+      min-height: rem(285px);
+    }
+    @include md {
+      min-height: rem(260px);
+    }
+    @include sm {
+      min-height: rem(240px);
+    }
+
+    & p {
+      color: $titleColor;
+      font-size: rem(18px);
+      line-height: rem(24px);
+      @include xs {
+        font-size: rem(16px);
+      }
+    }
+  }
+
+  &__title {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: rem(15px);
+    & i {
+      font-size: rem(60px);
+      color: $mainColor;
+    }
+    & h5 {
+      margin-left: rem(12px);
+      width: 70%;
+      font-size: rem(20px);
+      font-family: $secondFont;
+      font-weight: 600;
+      color: $titleColor;
+      @include sm {
+        font-size: rem(18px);
+      }
+    }
+  }
+}

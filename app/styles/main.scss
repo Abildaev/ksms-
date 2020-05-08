@@ -6,12 +6,22 @@
 
 
 @import 'components/preloader';
-
 @import 'components/header';
-@import 'components/banner';
-@import 'components/about';
-@import 'components/services';
-@import 'components/partners';
-@import 'components/reviews';
 @import 'components/contacts';
 @import 'components/footer';
+@import 'components/crumbs';
+
+
+@import 'components/mainPage/banner';
+@import 'components/mainPage/about';
+@import 'components/mainPage/services';
+@import 'components/mainPage/partners';
+@import 'components/mainPage/reviews';
+
+
+
+@import 'components/aboutUs/aboutPage';
+
+@import 'components/postuplenie/postuplenie';
+
+@import 'components/projects/summerScgool';

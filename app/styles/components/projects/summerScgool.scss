@@ -1,0 +1,98 @@
+.summer-school {
+  &__services {
+    padding: rem(60px) 0;
+    border-bottom: 1px solid $borderColor;
+  }
+
+  &__about {
+    margin-top: rem(60px);
+  }
+
+  &__title {
+    font-weight: 600;
+    font-family: $secondFont;
+    font-size: rem(24px);
+    margin-bottom: rem(50px);
+  }
+
+  &__gallery {
+    padding: rem(60px) 0 0 0;
+  }
+
+  &__photo-zoom {
+    transition: ease-out 0.3s;
+    background-color: #fff;
+    border: none;
+    padding: rem(8px) rem(16px);
+    position: absolute;
+    top: 150%;
+    border-radius: rem(10px);
+    text-transform: uppercase;
+    font-weight: 500;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
+  &__photo-after {
+    transition: ease-out 0.3s;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($secondColor, 0);
+
+    & span {
+      color: $titleColor;
+      font-weight: 500;
+    }
+  }
+
+  &__photo-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    background-color: #ccc;
+    overflow: hidden;
+
+    &:hover .summer-school__photo-zoom {
+      top: 50%;
+    }
+
+    &:hover .summer-school__photo-after {
+      background-color: rgba($secondColor, 0.6);
+    }
+  }
+
+
+
+  & .swiper-button-prev {
+    margin-right: rem(15px);
+  }
+
+  & .swiper-button-next,
+  .swiper-button-prev {
+    outline: none;
+    margin-top: 0;
+    position: static;
+    color: $navColor;
+    width: rem(32px);
+    height: rem(32px);
+    box-sizing: border-box;
+    border: 1px solid $secondColor;
+
+    &:after {
+      font-size: rem(16px);
+    }
+  }
+
+  &__span {
+    color: $mainColor;
+    font-size: rem(18px);
+    @include sm {
+      font-size: rem(16px);
+    }
+  }
+
+}

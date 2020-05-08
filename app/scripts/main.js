@@ -1,10 +1,5 @@
 document.addEventListener('DOMContentLoaded', function (event) {
 
-
-
-
-
-
   var mySwiper = new Swiper('.banner__slider', {
     // Optional parameters
     loop: true,
@@ -29,8 +24,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
   })
 
-
-
   var mySwiper = new Swiper('.partners__slider', {
     // Optional parameters
     speed: 1000,
@@ -42,6 +35,29 @@ document.addEventListener('DOMContentLoaded', function (event) {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+    },
+    breakpoints: {
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 3
+      }
+    }
+  })
+
+  var mySwiper = new Swiper('.summer-school__photos', {
+    // Optional parameters
+    speed: 1000,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     breakpoints: {
       // when window width is >= 768px
@@ -80,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 })
 
 document.body.style.overflow = 'hidden';
-
 function changeNav() {
   const preloader = document.querySelector('#preloader__wrap');
   preloader.classList.add('preloader__none');
@@ -89,7 +104,7 @@ function changeNav() {
   const nav = document.querySelector('.nav')
   const header = document.querySelector('.header')
   
-  if (distanceY >= 720) {
+  if (distanceY >= 180) {
     nav.classList.add('nav__fixed');
     header.classList.add('header__mb');
     (function (d, s, id) {

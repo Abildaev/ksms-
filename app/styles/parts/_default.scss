@@ -89,14 +89,49 @@ button {
   }
 }
 
+.subtitle {
+  text-indent: rem(20px);
+  color: $subtitleColor;
+  margin-bottom: rem(20px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include xs {
+    text-indent: rem(20px);
+  }
+}
+
+.subtitle__paraph {
+  color: $subtitleColor;
+  margin-bottom: rem(20px);
+  font-size: rem(18px);
+
+  @include sm {
+    font-size: rem(16px);
+  }
+}
+
+
+.dist {
+  list-style: disc outside none;
+  display: list-item;
+}
+
+.default_ul {
+  color: $navColor;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: rem(20px);
+}
+
 .whatsapp {
   position: fixed;
-  right: rem(15px);
+  right: rem(10px);
   bottom: rem(10px);
-  padding: rem(7px);
+  padding: rem(5px);
   z-index: 6;
-
-
 
 
   &:after {

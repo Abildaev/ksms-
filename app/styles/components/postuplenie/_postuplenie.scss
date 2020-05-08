@@ -1,0 +1,66 @@
+.polojenie {
+  &__number {
+    list-style-type: decimal;
+    list-style-position: inside;
+    color: $subtitleColor;
+    font-weight: 600;
+
+    & li {
+      margin-bottom: rem(20px);
+
+      & span {
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__letter {
+    padding-left: rem(30px);
+    list-style-type: lower-alpha;
+    list-style-position: inside;
+    font-weight: 600;
+
+    @include sm {
+      padding-left: rem(15px);
+    }
+
+    & li {
+      margin-top: rem(15px);
+      margin-bottom: 0;
+    }
+  }
+
+  &__roman {
+    padding-left: rem(30px);
+    list-style-type: lower-roman;
+    list-style-position: inside;
+    font-weight: 600;
+
+    @include sm {
+      padding-left: rem(15px);
+    }
+
+    & li {
+      margin-top: rem(10px);
+      margin-bottom: 0;
+    }
+  }
+
+  &__sub {
+    margin-bottom: rem(40px);
+    font-size: rem(18px);
+    color: $navColor;
+
+    @include sm {
+      font-size: rem(16px);
+    }
+
+  }
+
+  &__info {
+    margin-top: rem(70px);
+    & li {
+      list-style-type: none;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.about-page__group {
+  margin-bottom: rem(70px);
+
+}
+
+.contact-page {
+  &__title {
+    margin-bottom: rem(30px);
+  }
+
+  &__subtitle {
+    width: 50%;
+    color: $navColor;
+    font-size: rem(18px);
+    margin-bottom: rem(60px);
+
+    @include md {
+      width: 80%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    background-color: #e5eff6;
+  }
+}
+
+
+.program {
+  width: 100%;
+
+  &__text {
+    & h2 {
+      font-family: $secondFont;
+      font-size: rem(22px);
+      color: $titleColor;
+      margin-bottom: rem(25px);
+
+      @include sm {
+        font-size: rem(20px);
+      }
+    }
+
+    & p {
+      color: $subtitleColor;
+    }
+  }
+
+  &__icon {
+    font-size: rem(160px);
+    color: $mainColor;
+
+    @include xs {
+      font-size: rem(140px);
+    }
+  }
+}
